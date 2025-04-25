@@ -47,9 +47,17 @@ public class MainCharacter : Entity
         string layerName = base.checkCurrentLayer();
 
         if (layerName == "Water")//Water ise gravity 0 olcak 
+        {
             base.setGravity(0);
+            base.setDrag(2);
+        }
+            
         else if (layerName == "Air")
+        {
             base.setGravity(1);
+            base.setDrag(1);
+        }
+            
         
     }
 

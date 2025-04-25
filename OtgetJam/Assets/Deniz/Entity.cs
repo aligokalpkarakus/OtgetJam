@@ -23,6 +23,11 @@ public class Entity : MonoBehaviour
         rb.gravityScale = g;
     }
 
+    public virtual void setDrag(int d)
+    {
+        rb.linearDamping = d;
+    }
+
     public virtual string checkCurrentLayer()
     {
         //O an olunan noktadaki layerýn ismini döndürür.
