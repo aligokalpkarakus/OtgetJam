@@ -5,7 +5,7 @@ public class HarpoonBehaviour : MonoBehaviour
     public float speed = 6f;
     public float lifeTime = 5f;
     private Vector2 direction;
-
+    //mal deniz
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
