@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class MainCharacter : Entity
 {
-    [SerializeField] int speed;
+    [SerializeField] int  speed;
+    [SerializeField] int dash_speed;
+
+    public static Vector2 currentMainCharacterPosition;
 
     private string currentLayer = "";
 
@@ -15,51 +18,59 @@ public class MainCharacter : Entity
     // Update is called once per frame
     void Update()
     {
+        currentMainCharacterPosition = base.rb.position;
 
         Vector2 move_v2 = Vector2.zero;
         currentLayer = base.checkCurrentLayer(); // þu an bulunan layer
-        updateGravity();//suda ve havada olma durumuna göre gravity scaleýný günceller.
+        base.updateGravity();//suda ve havada olma durumuna göre gravity scaleýný günceller.
 
 
         if (currentLayer == "Water")
         {
+
             if (Input.GetKey(KeyCode.W))
             {
-                move_v2 = Vector2.up;
+                move_v2 += Vector2.up;
+                Debug.Log("up");
             }
-            else if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
-                move_v2 = Vector2.down;
+                move_v2 += Vector2.down;
+                Debug.Log("down");
             }
-            else if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
-                move_v2 = Vector2.right;
+                move_v2 += Vector2.right;
+                Debug.Log("right");
             }
-            base.moveVectorized(move_v2, speed);
-        }
-        
+            if (Input.GetKey(KeyCode.A))
+            {
+                move_v2 += Vector2.left;
+                Debug.Log("left");
+            }
 
-        
+            // normalize ediyoz ki çarpazda hýzlý gitmesin
+            if (move_v2 != Vector2.zero)
+                move_v2 = move_v2.normalized;
+
+            if (Input.GetKey(KeyCode.LeftShift))
+                dash(move_v2);
+            else
+                base.moveVectorized(move_v2, this.speed);
+
+        }
+
+
+
     }
 
-    private void updateGravity()
-    {
-        string layerName = base.checkCurrentLayer();
+    
 
-        if (layerName == "Water")//Water ise gravity 0 olcak 
-        {
-            base.setGravity(0);
-            base.setDrag(2);
-        }
-            
-        else if (layerName == "Air")
-        {
-            base.setGravity(1);
-            base.setDrag(1);
-        }
-            
-        
+    private void dash(Vector2 dir){
+        base.moveImpulse(dir, this.dash_speed);
+        Debug.Log("dashed");
     }
+
 
     
 }

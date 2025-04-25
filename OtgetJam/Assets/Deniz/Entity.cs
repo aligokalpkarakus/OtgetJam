@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    [SerializeField] float drag;
 
-
-    private Rigidbody2D rb;
+    public  Rigidbody2D rb;
     protected virtual void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.linearDamping = drag; //Sürtünme ayarlanýr
+        rb = GetComponent<Rigidbody2D>();//Sürtünme ayarlanýr
     }
 
     
-    public virtual void moveVectorized(Vector2 dir,int speed)
+    public virtual void moveVectorized(Vector2 dir,int force)
     {
-        rb.AddForce(dir.normalized * speed);
+        rb.AddForce(dir.normalized * force);
+    }
+
+    public virtual void moveImpulse(Vector2 dir, int force)
+    {
+        rb.AddForce(dir.normalized * force,ForceMode2D.Impulse);
     }
 
     public virtual void setGravity(int g)
@@ -37,4 +39,30 @@ public class Entity : MonoBehaviour
 
         return layerName;
     }
+
+    public virtual void ApplyForceToTarget(Vector2 targetPosition, float forceAmount)
+    {
+
+        Vector2 direction = (targetPosition - rb.position).normalized;
+
+        rb.AddForce(direction * forceAmount);
+    }
+
+    public virtual void updateGravity()
+    {
+        string layerName = checkCurrentLayer();
+
+        if (layerName == "Water")//Water ise gravity 0 olcak 
+        {
+            setGravity(0);
+            setDrag(2);
+        }
+
+        else if (layerName == "Air")
+        {
+            setGravity(1);
+            setDrag(1);
+        }
+    }
+
 }
