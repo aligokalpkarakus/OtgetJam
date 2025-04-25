@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Harpoon
   - Net
+  - PullableTrash
   layers:
   - Default
   - TransparentFX
