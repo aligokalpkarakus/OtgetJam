@@ -19,8 +19,8 @@ public class FishControllerGk : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
-            Debug.Log("Balýk yakalandý!");
-            // Örn: can azalt, oyunu bitir, vs.
+            Debug.Log("BalÄ±k yakalandÄ±!");
+            // Ã–rn: can azalt, oyunu bitir, vs.
         }
     }
 
