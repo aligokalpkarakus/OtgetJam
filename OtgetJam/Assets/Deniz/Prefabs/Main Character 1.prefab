@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 488634711575718925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.66, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 907176112854226622}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.88, y: 15.24, z: 0}
+  m_LocalPosition: {x: 2.202, y: 16.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -168,6 +168,9 @@ MonoBehaviour:
   escapeKey: 32
   requiredPresses: 10
   escapeTimeLimit: 5
+  dashIcon: {fileID: 0}
+  dashEffectPrefab: {fileID: 0}
+  cooldownFadeAlpha: 0.3
 --- !u!50 &3548934064510028003
 Rigidbody2D:
   serializedVersion: 5

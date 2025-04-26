@@ -23,7 +23,7 @@ public class MainCharacter : Entity
     private bool isTrapped = false; // Karakter çöpe yakalandý mý?
     private int currentPresses = 0; // Mevcut basma sayýsý
     private float trapTimer = 0f; // Yakalanma zamanlayýcýsý
-    private GameObject trappingTrash; // Yakalayan çöp nesnesi
+    private GameObject trappingTrash; // Yakalayan çöp nesnesiz
 
     protected override void Start()
     {
