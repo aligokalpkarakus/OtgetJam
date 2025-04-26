@@ -24,7 +24,7 @@ public class BigFish : Entity
         base.updateGravity();
 
         // Oyuncuyu görüyor mu?
-        isChasing = CanSeePlayer();
+        isChasing = CanSeePlayer(5f);
 
         if (isChasing)
         {
@@ -82,28 +82,16 @@ public class BigFish : Entity
     }
 
 
-    private bool CanSeePlayer()
+    private bool CanSeePlayer(float range)
     {
         // Çevremizdeki tüm "Player" tagli objeleri bul
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, viewRadius);
+        Vector2 bigFishPos = base.rb.position;
+        float dist = Vector2.Distance(bigFishPos, MainCharacter.currentMainCharacterPosition);
 
-        foreach (var hit in hits)
-        {
-            if (hit.CompareTag("Player"))
-            {
-                // Eðer "Player" tagli bir obje bulduysa
-                Vector2 directionToPlayer = (hit.transform.position - transform.position).normalized;
-
-                // Eðer viewAngle kullanmak istemiyorsan direkt return true diyebilirsin
-                float angleToPlayer = Vector2.Angle(transform.right, directionToPlayer);
-                if (angleToPlayer < viewAngle / 2f)
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        if (dist <= range)
+            return true;
+        else
+            return false;
     }
 
 

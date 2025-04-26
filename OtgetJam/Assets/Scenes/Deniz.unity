@@ -1160,6 +1160,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 734390896302117350, guid: 75e14d03618d2ba4a833d1352fb661d5, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2717397335433959501, guid: 75e14d03618d2ba4a833d1352fb661d5, type: 3}
       propertyPath: m_Name
       value: BigFish
