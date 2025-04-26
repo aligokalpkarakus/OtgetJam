@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4278094393000729336}
   - component: {fileID: 6785378561688034354}
   - component: {fileID: 4478123683856384293}
+  - component: {fileID: 4307962128554663128}
+  - component: {fileID: 3335795025276972560}
   m_Layer: 0
   m_Name: "\u0130stilac\u0131"
   m_TagString: Untagged
@@ -110,3 +112,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4307962128554663128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263490433392637464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa6c26ef56123d42846b9fe33cacf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6785378561688034354}
+  maxRotationAngle: 75
+  rb: {fileID: 0}
+  moveForce: 3
+  dashForce: 10
+  exclamationMarkPrefab: {fileID: 3752724282638112257, guid: b4c82d598fecef24ea9eef2180eb9aa1, type: 3}
+--- !u!50 &3335795025276972560
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263490433392637464}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
