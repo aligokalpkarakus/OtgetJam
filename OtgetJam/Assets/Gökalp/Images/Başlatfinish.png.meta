@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 77b1afba68752084fb8a916a078b666f
+guid: f86939b79c88a8047abe564670700dff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2753575934946491299
-    second: Ayarlar_0
+      213: -1730973962489654577
+    second: "Bas\u0327latfinish_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ayarlar_0
+      name: "Bas\u0327latfinish_0"
       rect:
         serializedVersion: 2
-        x: 29
-        y: 259
-        width: 762
-        height: 522
+        x: 0
+        y: 0
+        width: 529
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d544377b64559c9d0800000000000000
-      internalID: -2753575934946491299
+      spriteID: fc29a5a2a585af7e0800000000000000
+      internalID: -1730973962489654577
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ayarlar_0: -2753575934946491299
+      "Bas\u0327latfinish_0": -1730973962489654577
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

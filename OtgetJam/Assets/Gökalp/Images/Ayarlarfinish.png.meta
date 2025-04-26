@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c2d182c14ad8694ca5ab7be54b02c59
+guid: a35c413dff84519498c3f1b9cdeb2cc1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5025521169570206609
-    second: "C\u0327\u0131k_0"
+      213: 8202782033170756977
+    second: Ayarlarfinish_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "C\u0327\u0131k_0"
+      name: Ayarlarfinish_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 711
-        height: 281
+        width: 759
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6cef846f13c14ab0800000000000000
-      internalID: -5025521169570206609
+      spriteID: 17579198cc226d170800000000000000
+      internalID: 8202782033170756977
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "C\u0327\u0131k_0": -5025521169570206609
+      Ayarlarfinish_0: 8202782033170756977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
