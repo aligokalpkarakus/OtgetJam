@@ -38,11 +38,7 @@ public class MainCharacter : Entity
         currentMainCharacterPosition = base.rb.position;
 
         // Eðer çöpe yakalandýysa, kaçýþ sistemini çalýþtýr
-        if (isTrapped)
-        {
-            HandleTrashEscape();
-            return; // Hareket etmesini engelle
-        }
+        
 
         Vector2 move_v2 = Vector2.zero;
         currentLayer = base.checkCurrentLayer(); // Þu an bulunan layer

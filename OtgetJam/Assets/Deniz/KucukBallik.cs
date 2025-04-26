@@ -23,7 +23,7 @@ public class KucukBallik : Entity
         base.Update();
         base.updateGravity();
 
-        bool isRunning = CanSeePlayer(2f);
+        bool isRunning = CanSeePlayer(3f);
 
         if (isRunning)
         {
