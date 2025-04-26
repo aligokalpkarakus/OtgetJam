@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2d7dc7b26279a1a428248a071b7efef9
+guid: 1581af11863b70a4694909a6db60814a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6402326682323733849
-    second: Arkadeniz_0
+      213: 3103262862871627914
+    second: "Ads\u0131z_Resim (3)_0"
+  - first:
+      213: 7658265704558425858
+    second: "Ads\u0131z_Resim (3)_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arkadeniz_0
+      name: "Ads\u0131z_Resim (3)_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4000
-        height: 1080
+        x: 229
+        y: 956
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95d49e35232a9d850800000000000000
-      internalID: 6402326682323733849
+      spriteID: a88002ac121011b20800000000000000
+      internalID: 3103262862871627914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ads\u0131z_Resim (3)_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 676
+        width: 1000
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207f2c34510a74a60800000000000000
+      internalID: 7658265704558425858
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Arkadeniz_0: 6402326682323733849
+      "Ads\u0131z_Resim (3)_0": 3103262862871627914
+      "Ads\u0131z_Resim (3)_1": 7658265704558425858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
