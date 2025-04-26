@@ -56,9 +56,11 @@ public class SwarmFish : Entity
 
         if (exclamationMarkPrefab != null)
         {
-            exclamationInstance = Instantiate(exclamationMarkPrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity, transform);
+            Vector3 offset = new Vector3(5f, 0.6f, 0f); // saða 0.5, yukarý 0.5 birim
+            exclamationInstance = Instantiate(exclamationMarkPrefab, transform.position + offset, Quaternion.identity, transform);
         }
     }
+
 
     private void Dash(Vector2 direction)
     {
