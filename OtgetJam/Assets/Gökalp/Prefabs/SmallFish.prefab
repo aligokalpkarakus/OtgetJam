@@ -127,7 +127,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8971604711402912003}
   maxRotationAngle: 75
   rb: {fileID: 3107910100982696467}
-  speed: 800
+  speed: 500
   patrolWaitTime: 2
   viewRadius: 3
   viewAngle: 90

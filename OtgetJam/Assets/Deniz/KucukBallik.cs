@@ -23,7 +23,7 @@ public class KucukBallik : Entity
         base.Update();
         base.updateGravity();
 
-        bool isRunning = CanSeePlayer(5f);
+        bool isRunning = CanSeePlayer(2f);
 
         if (isRunning)
         {
@@ -56,7 +56,7 @@ public class KucukBallik : Entity
         {
             base.ApplyForceToTarget(patrolTarget, speed * Time.deltaTime);
 
-            if (Vector2.Distance(rb.position, patrolTarget) < 0.5f)
+            if (Vector2.Distance(rb.position, patrolTarget) < 1f)
             {
                 StartCoroutine(WaitAndPickNewTarget());
             }
@@ -93,7 +93,7 @@ public class KucukBallik : Entity
     private void PickNewPatrolTarget()
     {
         int maxTries = 10;
-        float safeMargin = 1f; // Kenardan uzak durma mesafesi
+        float safeMargin = 3f; // Kenardan uzak durma mesafesi
 
         Bounds waterBounds = GetWaterBounds();
 
