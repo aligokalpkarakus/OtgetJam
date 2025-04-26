@@ -16,9 +16,12 @@ public class MainCharacter : Entity
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
+
         currentMainCharacterPosition = base.rb.position;
+
 
         Vector2 move_v2 = Vector2.zero;
         currentLayer = base.checkCurrentLayer(); // þu an bulunan layer

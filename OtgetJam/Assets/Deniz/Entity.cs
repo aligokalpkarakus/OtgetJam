@@ -3,10 +3,18 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
 
+    [SerializeField] private SpriteRenderer spriteRenderer; // Balýk sprite'ý
+    [SerializeField] private float maxRotationAngle = 75f; // Yukarý/aþaðý maksimum dönüþ derecesi
+
     public  Rigidbody2D rb;
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();//Sürtünme ayarlanýr
+    }
+
+    protected virtual void Update()
+    {
+        RotateToVelocity();
     }
 
     
@@ -62,6 +70,28 @@ public class Entity : MonoBehaviour
         {
             setGravity(1);
             setDrag(1);
+        }
+    }
+
+    public virtual void RotateToVelocity()
+    {
+        Vector2 velocity = rb.linearVelocity;
+
+        if (velocity.sqrMagnitude < 0.01f) return;
+
+        float angle = Mathf.Atan2(velocity.y, Mathf.Abs(velocity.x)) * Mathf.Rad2Deg;
+        float clampedAngle = Mathf.Clamp(angle, -maxRotationAngle, maxRotationAngle);
+
+        // Yönü belirle ve simetri uygula
+        if (velocity.x >= 0)
+        {
+            spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0f, 0f, clampedAngle);
+        }
+        else
+        {
+            spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0f, 0f, -clampedAngle);
         }
     }
 
