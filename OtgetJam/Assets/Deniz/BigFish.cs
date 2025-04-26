@@ -11,8 +11,9 @@ public class BigFish : Entity
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         base.updateGravity();
         base.ApplyForceToTarget(MainCharacter.currentMainCharacterPosition, speed * Time.deltaTime);
     }
