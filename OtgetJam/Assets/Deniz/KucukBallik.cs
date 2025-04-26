@@ -85,7 +85,7 @@ public class KucukBallik : Entity
         }
 
         Debug.LogWarning("Water alaný bulunamadý!");
-        return new Bounds(Vector3.zero, Vector3.one * 100f); // fallback
+        return new Bounds(Vector3.zero, Vector3.one * 10f); // fallback
     }
 
 
@@ -93,17 +93,14 @@ public class KucukBallik : Entity
     private void PickNewPatrolTarget()
     {
         int maxTries = 10;
-        float safeMargin = 3f; // Kenardan uzak durma mesafesi
-
-        Bounds waterBounds = GetWaterBounds();
+        float safeMargin = 0.5f; // Su kenarýndan biraz uzak dur
 
         for (int i = 0; i < maxTries; i++)
         {
-            float randomX = Random.Range(waterBounds.min.x + safeMargin, waterBounds.max.x - safeMargin);
-            float randomY = Random.Range(waterBounds.min.y + safeMargin, waterBounds.max.y - safeMargin);
-            Vector2 potentialTarget = new Vector2(randomX, randomY);
+            Vector2 randomOffset = Random.insideUnitCircle * viewRadius;
+            Vector2 potentialTarget = (Vector2)transform.position + randomOffset;
 
-            if (IsPointSafe(potentialTarget, 0.1f)) // çok küçük offset yeter
+            if (IsPointSafe(potentialTarget, safeMargin))
             {
                 patrolTarget = potentialTarget;
                 return;
@@ -112,6 +109,7 @@ public class KucukBallik : Entity
 
         patrolTarget = transform.position;
     }
+
 
 
     private bool IsPointSafe(Vector2 center, float offset)
