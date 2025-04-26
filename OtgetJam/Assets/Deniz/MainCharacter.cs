@@ -58,7 +58,7 @@ public class MainCharacter : Entity
             if (move_v2 != Vector2.zero)
                 move_v2 = move_v2.normalized;
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && Time.time >= nextAvaliableTimeDash)
                 dash(move_v2);
             else
                 base.moveVectorized(move_v2, this.speed);
@@ -73,6 +73,7 @@ public class MainCharacter : Entity
 
     private void dash(Vector2 dir){
         base.moveImpulse(dir, this.dash_speed);
+        nextAvaliableTimeDash = Time.time + coolDownPeriod;
         Debug.Log("dashed");
     }
 
