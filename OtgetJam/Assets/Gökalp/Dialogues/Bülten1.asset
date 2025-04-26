@@ -14,4 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Spiker
-    text: 
+    text: "\u0130yi ak\u015Famlar say\u0131n seyirciler"
+  - speakerName: Spiker
+    text: "Bug\xFCnk\xFC g\xFCndemimiz sudaki ya\u015Fam, yenilenebilir enerji, temiz
+      su ve sanitasyon."
+  - speakerName: Spiker
+    text: "Denizlerimizdeki \xE7\xF6pler bir\xE7ok \u015Firket taraf\u0131ndan temizlenmeye
+      \xE7al\u0131\u015F\u0131larak temiz su ve sanitasyonla beraber sudaki ya\u015Fam\u0131
+      da korumaya hizmet ediyor."
+  - speakerName: Spiker
+    text: "Bununla beraber bir\xE7ok r\xFCzgar t\xFCrbini ile de yenilenebilir enerji
+      konusunda \xE7al\u0131\u015Fmalar mevcut."
+  - speakerName: Spiker
+    text: "Yavrular\u0131n\u0131 do\u011Furmak i\xE7in s\u0131cak sulara yelken a\xE7t\u0131.
+      Bu yolculu\u011Fu tamamlamak i\xE7in 1 g\xFCn\xFC kald\u0131."
+  - speakerName: Spiker
+    text: "T\xFCm bu \xE7abalara ra\u011Fmen Nemo'nun yar\u0131n\u0131 olmayabilir..."
