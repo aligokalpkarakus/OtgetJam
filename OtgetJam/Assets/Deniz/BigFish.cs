@@ -4,18 +4,18 @@ public class BigFish : Entity
 {
     [Header("Big Fish Settings")]
     [SerializeField] private int speed = 5;
-    [SerializeField] private Transform[] patrolPoints; // Devriye noktalarý
-    [SerializeField] private float patrolWaitTime = 2f; // Noktada bekleme süresi
+    [SerializeField] private float patrolWaitTime = 2f; // Rastgele hedef seçtikten sonra bekleme süresi
     [SerializeField] private float viewRadius = 5f; // Görüþ yarýçapý
     [SerializeField] private float viewAngle = 90f; // Görüþ açýsý (derece)
 
-    private int currentPatrolIndex = 0;
+    private Vector2 patrolTarget;
     private bool isWaiting = false;
     private bool isChasing = false;
 
     protected override void Start()
     {
         base.Start();
+        PickNewPatrolTarget();
     }
 
     protected override void Update()
@@ -23,44 +23,49 @@ public class BigFish : Entity
         base.Update();
         base.updateGravity();
 
-        // Oyuncuyu görüyor mu kontrol et
+        // Oyuncuyu görüyor mu?
         isChasing = CanSeePlayer();
 
         if (isChasing)
         {
-            // Görüyorsa -> Oyuncuya saldýr
+            // Saldýr modunda: oyuncuya git
             base.ApplyForceToTarget(MainCharacter.currentMainCharacterPosition, speed * Time.deltaTime);
         }
         else
         {
-            // Görmüyorsa -> Devriye at
+            // Devriye modu: rastgele seçtiði noktaya git
             Patrol();
         }
     }
 
-
     private void Patrol()
     {
-        if (patrolPoints.Length == 0) return;
-
         if (!isWaiting)
         {
-            Vector2 targetPos = patrolPoints[currentPatrolIndex].position;
-            base.ApplyForceToTarget(targetPos, speed * Time.deltaTime);
+            base.ApplyForceToTarget(patrolTarget, speed * Time.deltaTime);
 
-            if (Vector2.Distance(rb.position, targetPos) < 0.5f)
+            if (Vector2.Distance(rb.position, patrolTarget) < 0.5f)
             {
-                StartCoroutine(WaitAndMove());
+                StartCoroutine(WaitAndPickNewTarget());
             }
         }
     }
 
-    private System.Collections.IEnumerator WaitAndMove()
+    private System.Collections.IEnumerator WaitAndPickNewTarget()
     {
         isWaiting = true;
         yield return new WaitForSeconds(patrolWaitTime);
-        currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+        PickNewPatrolTarget();
         isWaiting = false;
+    }
+
+    private void PickNewPatrolTarget()
+    {
+        // Görüþ alaný içinde rastgele bir yön ve mesafe seç
+        float randomAngle = Random.Range(-viewAngle / 2f, viewAngle / 2f);
+        Vector2 direction = Quaternion.Euler(0, 0, randomAngle) * transform.right;
+
+        patrolTarget = (Vector2)transform.position + direction.normalized * Random.Range(viewRadius * 0.3f, viewRadius);
     }
 
     private bool CanSeePlayer()
@@ -71,7 +76,7 @@ public class BigFish : Entity
         float angleToPlayer = Vector2.Angle(transform.right, directionToPlayer.normalized);
         if (angleToPlayer < viewAngle / 2f)
         {
-            // Burada istersen raycast atýp arada duvar vs var mý kontrol edebiliriz.
+            // Burada raycast ile araya bir obje girdi mi kontrol edebilirsin istersen
             return true;
         }
 
@@ -80,7 +85,7 @@ public class BigFish : Entity
 
     private void OnDrawGizmosSelected()
     {
-        // Editörde görüþ alanýný görmek için
+        // Görüþ alanýný editörde göstermek için
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
 
@@ -90,5 +95,9 @@ public class BigFish : Entity
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, transform.position + leftBoundary * viewRadius);
         Gizmos.DrawLine(transform.position, transform.position + rightBoundary * viewRadius);
+
+        // Þu anki patrol hedefini de çizelim
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(patrolTarget, 0.2f);
     }
 }
