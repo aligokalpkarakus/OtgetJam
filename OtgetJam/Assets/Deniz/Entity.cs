@@ -18,12 +18,12 @@ public class Entity : MonoBehaviour
     }
 
     
-    public virtual void moveVectorized(Vector2 dir,int force)
+    public virtual void moveVectorized(Vector2 dir,float force)
     {
         rb.AddForce(dir.normalized * force);
     }
 
-    public virtual void moveImpulse(Vector2 dir, int force)
+    public virtual void moveImpulse(Vector2 dir, float force)
     {
         rb.AddForce(dir.normalized * force,ForceMode2D.Impulse);
     }

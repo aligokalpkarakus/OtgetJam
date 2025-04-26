@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 828b40146d677194f8f9a400fd226708
+guid: 8e961cbeaae95dd4e8c95a62c1184536
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3657987718770746871
-    second: kucukBalik1_0
-  - first:
-      213: -1829985216456725600
-    second: kucukBalik1_1
-  - first:
-      213: -8441958100076304451
-    second: kucukBalik1_2
-  - first:
-      213: -4454103900778465338
-    second: kucukBalik1_3
-  - first:
-      213: 1007338777205955422
-    second: kucukBalik1_4
+      213: 3554002679272061861
+    second: Buyuk1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kucukBalik1_0
+      name: Buyuk1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 584
-        width: 868
-        height: 402
+        x: 49
+        y: 12
+        width: 951
+        height: 702
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f5621a0378c3c230800000000000000
-      internalID: 3657987718770746871
+      spriteID: 5ab3ccc5b9a525130800000000000000
+      internalID: 3554002679272061861
       vertices: []
       indices: 
       edges: []
@@ -137,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 42dd68e15f65eb9448b2be28050220bd
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -146,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      kucukBalik1_5: -1309164638
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
