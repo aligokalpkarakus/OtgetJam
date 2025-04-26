@@ -8,7 +8,7 @@ public class GarbageCollector : MonoBehaviour
     public Transform chainSpawnPoint;
     public float chainSpeed = 5f;
     public float chainReturnSpeed = 8f;
-    public float collectionDelay = 0.5f;
+    public float collectionDelay = 2f;
 
     [Header("Garbage Settings")]
     public List<GameObject> garbageObjects = new List<GameObject>(); // Editor üzerinden çöpleri buraya sürükleyebilirsiniz

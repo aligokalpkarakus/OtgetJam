@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308896477109631281}
   - component: {fileID: 6365699080392231650}
+  - component: {fileID: 5965442563492918992}
   m_Layer: 0
   m_Name: "\xC7\xF6p3"
   m_TagString: PullableTrash
@@ -87,3 +88,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5965442563492918992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283866677030897999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6616b947284a2fe4c80c4bc7b1b5deb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatStrength: 0.3
+  floatSpeed: 1

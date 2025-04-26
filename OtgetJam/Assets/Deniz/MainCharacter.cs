@@ -38,46 +38,54 @@ public class MainCharacter : Entity
         currentMainCharacterPosition = base.rb.position;
 
         // Eðer çöpe yakalandýysa, kaçýþ sistemini çalýþtýr
+        if (isTrapped)
+        {
+            HandleTrashEscape();
+            // Hareket etmesini engelle
+        }
+        else
+        {
+            Vector2 move_v2 = Vector2.zero;
+            currentLayer = base.checkCurrentLayer(); // Þu an bulunan layer
+            base.updateGravity();//suda ve havada olma durumuna göre gravity scale'ýný günceller.
+
+
+            if (currentLayer == "Water")
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    move_v2 += Vector2.up;
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    move_v2 += Vector2.down;
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    move_v2 += Vector2.right;
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    move_v2 += Vector2.left;
+                }
+
+                // normalize ediyoz ki çaprazda hýzlý gitmesin
+                if (move_v2 != Vector2.zero)
+                    move_v2 = move_v2.normalized;
+
+                if (Input.GetKey(KeyCode.LeftShift) && Time.time >= nextAvaliableTimeDash)
+                    dash(move_v2);
+                else
+                    base.moveVectorized(move_v2, this.speed * Time.deltaTime);
+            }
+            else if (currentLayer == "Ruzgar")
+            {
+                Debug.Log("RUZGAR");
+                base.moveImpulse(Vector2.right, this.ruzgar_speed * Time.deltaTime);
+            }
+        }
+
         
-
-        Vector2 move_v2 = Vector2.zero;
-        currentLayer = base.checkCurrentLayer(); // Þu an bulunan layer
-        base.updateGravity();//suda ve havada olma durumuna göre gravity scale'ýný günceller.
-
-
-        if (currentLayer == "Water")
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                move_v2 += Vector2.up;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                move_v2 += Vector2.down;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                move_v2 += Vector2.right;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                move_v2 += Vector2.left;
-            }
-
-            // normalize ediyoz ki çaprazda hýzlý gitmesin
-            if (move_v2 != Vector2.zero)
-                move_v2 = move_v2.normalized;
-
-            if (Input.GetKey(KeyCode.LeftShift) && Time.time >= nextAvaliableTimeDash)
-                dash(move_v2);
-            else
-                base.moveVectorized(move_v2, this.speed * Time.deltaTime);
-        }
-        else if (currentLayer == "Ruzgar")
-        {
-            Debug.Log("RUZGAR");
-            base.moveImpulse(Vector2.right, this.ruzgar_speed * Time.deltaTime);
-        }
     }
 
     private void dash(Vector2 dir)
