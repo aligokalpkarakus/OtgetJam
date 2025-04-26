@@ -61,24 +61,45 @@ public class BigFish : Entity
 
     private void PickNewPatrolTarget()
     {
-        int maxTries = 10; // Çok nadiren hata olmasýn diye sýnýr koyuyoruz
+        int maxTries = 10;
+        float offset = 5f; // Sprite'ýn yarýçapý kadar kaydýrma (güvenlik payý)
+
         for (int i = 0; i < maxTries; i++)
         {
-            // Rastgele bir nokta seç (viewRadius yarýçapýnda)
             Vector2 randomOffset = Random.insideUnitCircle * viewRadius;
             Vector2 potentialTarget = (Vector2)transform.position + randomOffset;
 
-            // Bu noktada Water layer var mý kontrol et
-            RaycastHit2D hit = Physics2D.Raycast(potentialTarget, Vector2.zero);
-            if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Water"))
+            if (IsPointSafe(potentialTarget, offset))
             {
                 patrolTarget = potentialTarget;
                 return;
             }
         }
 
-        // Eðer maxTries kadar denedi ve bulamadýysa: Þu anki pozisyonu hedefle
         patrolTarget = transform.position;
+    }
+
+    private bool IsPointSafe(Vector2 center, float offset)
+    {
+        Vector2[] offsets = new Vector2[]
+        {
+        Vector2.zero,
+        new Vector2(offset, 0),
+        new Vector2(-offset, 0),
+        new Vector2(0, offset),
+        new Vector2(0, -offset)
+        };
+
+        foreach (Vector2 off in offsets)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(center + off, Vector2.zero);
+            if (hit.collider == null || hit.collider.gameObject.layer != LayerMask.NameToLayer("Water"))
+            {
+                return false; // Eðer bir tanesi bile Water deðilse bu pozisyon güvenli deðil
+            }
+        }
+
+        return true; // Hepsi Water -> güvenli
     }
 
 

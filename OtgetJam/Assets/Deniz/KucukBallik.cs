@@ -23,7 +23,7 @@ public class KucukBallik : Entity
         base.Update();
         base.updateGravity();
 
-        bool isRunning = CanSeePlayer(5f);
+        bool isRunning = CanSeePlayer(2f);
 
         if (isRunning)
         {
@@ -56,7 +56,7 @@ public class KucukBallik : Entity
         {
             base.ApplyForceToTarget(patrolTarget, speed * Time.deltaTime);
 
-            if (Vector2.Distance(rb.position, patrolTarget) < 0.5f)
+            if (Vector2.Distance(rb.position, patrolTarget) < 1f)
             {
                 StartCoroutine(WaitAndPickNewTarget());
             }
@@ -71,25 +71,70 @@ public class KucukBallik : Entity
         isWaiting = false;
     }
 
+    private Bounds GetWaterBounds()
+    {
+        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.layer == LayerMask.NameToLayer("Water"))
+            {
+                Collider2D collider = obj.GetComponent<Collider2D>();
+                if (collider != null)
+                    return collider.bounds;
+            }
+        }
+
+        Debug.LogWarning("Water alaný bulunamadý!");
+        return new Bounds(Vector3.zero, Vector3.one * 100f); // fallback
+    }
+
+
+
     private void PickNewPatrolTarget()
     {
-        int maxTries = 10; // Çok nadiren hata olmasýn diye sýnýr koyuyoruz
+        int maxTries = 10;
+        float safeMargin = 3f; // Kenardan uzak durma mesafesi
+
+        Bounds waterBounds = GetWaterBounds();
+
         for (int i = 0; i < maxTries; i++)
         {
-            // Rastgele bir nokta seç (viewRadius yarýçapýnda)
-            Vector2 randomOffset = Random.insideUnitCircle * viewRadius;
-            Vector2 potentialTarget = (Vector2)transform.position + randomOffset;
+            float randomX = Random.Range(waterBounds.min.x + safeMargin, waterBounds.max.x - safeMargin);
+            float randomY = Random.Range(waterBounds.min.y + safeMargin, waterBounds.max.y - safeMargin);
+            Vector2 potentialTarget = new Vector2(randomX, randomY);
 
-            // Bu noktada Water layer var mý kontrol et
-            RaycastHit2D hit = Physics2D.Raycast(potentialTarget, Vector2.zero);
-            if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Water"))
+            if (IsPointSafe(potentialTarget, 0.1f)) // çok küçük offset yeter
             {
                 patrolTarget = potentialTarget;
                 return;
             }
         }
 
-        // Eðer maxTries kadar denedi ve bulamadýysa: Þu anki pozisyonu hedefle
         patrolTarget = transform.position;
     }
+
+
+    private bool IsPointSafe(Vector2 center, float offset)
+    {
+        Vector2[] offsets = new Vector2[]
+        {
+        Vector2.zero,
+        new Vector2(offset, 0),
+        new Vector2(-offset, 0),
+        new Vector2(0, offset),
+        new Vector2(0, -offset)
+        };
+
+        foreach (Vector2 off in offsets)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(center + off, Vector2.zero);
+            if (hit.collider == null || hit.collider.gameObject.layer != LayerMask.NameToLayer("Water"))
+            {
+                return false; // Eðer bir tanesi bile Water deðilse bu pozisyon güvenli deðil
+            }
+        }
+
+        return true; // Hepsi Water -> güvenli
+    }
+
 }

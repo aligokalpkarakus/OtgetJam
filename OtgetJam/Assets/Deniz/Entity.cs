@@ -62,6 +62,7 @@ public class Entity : MonoBehaviour
 
         if (layerName == "Water")//Water ise gravity 0 olcak 
         {
+            Debug.Log("Water");
             setGravity(0);
             setDrag(2);
         }

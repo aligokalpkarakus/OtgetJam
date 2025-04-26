@@ -8,20 +8,21 @@ public class CameraController : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
-    void LateUpdate()
+    void Update()
     {
-        
 
-        // Hedef pozisyo
 
+        // Hedef pozisyon
         Vector3 targetPosition = new Vector3(
-             MainCharacter.currentMainCharacterPosition.x + offset.x,
+            MainCharacter.currentMainCharacterPosition.x + offset.x,
             MainCharacter.currentMainCharacterPosition.y + offset.y,
-            -10f // Kamera z'si sabit kalmalý 2D için
+            -10f
         );
 
-        // Yumuþak takip
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        // Kamera anýnda pozisyona sýçrar
+        transform.position = targetPosition;
+
+
     }
 
 
