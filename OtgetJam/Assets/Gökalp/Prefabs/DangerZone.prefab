@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4572039433419005995
+--- !u!1 &3752724282638112257
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6024668627140392759}
-  - component: {fileID: 7231906693744170378}
-  - component: {fileID: -6526975575935274436}
-  - component: {fileID: -969194377834184440}
+  - component: {fileID: 8265572874121578523}
+  - component: {fileID: 7299013558270024734}
+  - component: {fileID: 1452995382463074004}
+  - component: {fileID: 2340667900620902448}
   m_Layer: 0
-  m_Name: HarpoonPlaceHolder
-  m_TagString: Harpoon
+  m_Name: DangerZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6024668627140392759
+--- !u!4 &8265572874121578523
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4572039433419005995}
+  m_GameObject: {fileID: 3752724282638112257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 3.52, y: -1.12, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7231906693744170378
+--- !u!212 &7299013558270024734
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4572039433419005995}
+  m_GameObject: {fileID: 3752724282638112257}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,24 +78,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 976676356772972685, guid: 6eebc4c7461a0554284a837ba67ac322, type: 3}
+  m_Sprite: {fileID: -91631619023908610, guid: 9df2c9e058351e74ab86951d5828e227, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
-  m_FlipY: 1
+  m_FlipX: 0
+  m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.46, y: 6.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-6526975575935274436
-BoxCollider2D:
+--- !u!58 &1452995382463074004
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4572039433419005995}
+  m_GameObject: {fileID: 3752724282638112257}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -124,28 +124,16 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18.81, y: 3.06}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &-969194377834184440
+  m_Radius: 0.59
+--- !u!114 &2340667900620902448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4572039433419005995}
+  m_GameObject: {fileID: 3752724282638112257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd94e68b8a414c748868b72b0be80813, type: 3}
+  m_Script: {fileID: 11500000, guid: 774a4d96b0495a34dbe337200eebc9d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  lifeTime: 5
