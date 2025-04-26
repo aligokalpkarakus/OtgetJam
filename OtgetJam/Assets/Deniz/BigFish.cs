@@ -61,27 +61,51 @@ public class BigFish : Entity
 
     private void PickNewPatrolTarget()
     {
-        // Görüþ alaný içinde rastgele bir yön ve mesafe seç
-        float randomAngle = Random.Range(-viewAngle / 2f, viewAngle / 2f);
-        Vector2 direction = Quaternion.Euler(0, 0, randomAngle) * transform.right;
+        int maxTries = 10; // Çok nadiren hata olmasýn diye sýnýr koyuyoruz
+        for (int i = 0; i < maxTries; i++)
+        {
+            // Rastgele bir nokta seç (viewRadius yarýçapýnda)
+            Vector2 randomOffset = Random.insideUnitCircle * viewRadius;
+            Vector2 potentialTarget = (Vector2)transform.position + randomOffset;
 
-        patrolTarget = (Vector2)transform.position + direction.normalized * Random.Range(viewRadius * 0.3f, viewRadius);
+            // Bu noktada Water layer var mý kontrol et
+            RaycastHit2D hit = Physics2D.Raycast(potentialTarget, Vector2.zero);
+            if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Water"))
+            {
+                patrolTarget = potentialTarget;
+                return;
+            }
+        }
+
+        // Eðer maxTries kadar denedi ve bulamadýysa: Þu anki pozisyonu hedefle
+        patrolTarget = transform.position;
     }
+
 
     private bool CanSeePlayer()
     {
-        Vector2 directionToPlayer = MainCharacter.currentMainCharacterPosition - rb.position;
-        if (directionToPlayer.magnitude > viewRadius) return false;
+        // Çevremizdeki tüm "Player" tagli objeleri bul
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, viewRadius);
 
-        float angleToPlayer = Vector2.Angle(transform.right, directionToPlayer.normalized);
-        if (angleToPlayer < viewAngle / 2f)
+        foreach (var hit in hits)
         {
-            // Burada raycast ile araya bir obje girdi mi kontrol edebilirsin istersen
-            return true;
+            if (hit.CompareTag("Player"))
+            {
+                // Eðer "Player" tagli bir obje bulduysa
+                Vector2 directionToPlayer = (hit.transform.position - transform.position).normalized;
+
+                // Eðer viewAngle kullanmak istemiyorsan direkt return true diyebilirsin
+                float angleToPlayer = Vector2.Angle(transform.right, directionToPlayer);
+                if (angleToPlayer < viewAngle / 2f)
+                {
+                    return true;
+                }
+            }
         }
 
         return false;
     }
+
 
     private void OnDrawGizmosSelected()
     {
