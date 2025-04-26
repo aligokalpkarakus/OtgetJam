@@ -40,8 +40,9 @@ public class Entity : MonoBehaviour
 
     public virtual string checkCurrentLayer()
     {
+        int mask = LayerMask.GetMask("Water", "Air","Ruzgar");
         // rb.position'dan direkt aþaðýya doðru çok kýsa bir ray atýyoruz
-        RaycastHit2D hit = Physics2D.Raycast(rb.position, Vector2.down, 0.1f);
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, Vector2.down, 0.1f, mask);
 
         if (hit.collider != null)
         {
