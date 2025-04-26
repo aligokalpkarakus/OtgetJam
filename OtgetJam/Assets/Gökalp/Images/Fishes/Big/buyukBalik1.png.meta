@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      buyukBalik1_0: 4313914244865895254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
