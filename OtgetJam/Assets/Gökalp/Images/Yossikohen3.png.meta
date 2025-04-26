@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Yossikohen3_0: 5772209883665203444
+      Yossikohen3_1: 1547858263814483258
+      Yossikohen3_2: -1284289765495402798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
