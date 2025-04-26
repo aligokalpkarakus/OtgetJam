@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7019045921144396388}
   - component: {fileID: -1423971328954940325}
   - component: {fileID: -5736264125484573618}
+  - component: {fileID: 474212208978967049}
   m_Layer: 0
   m_Name: NetPlaceHolder
   m_TagString: Net
@@ -176,3 +177,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 2
+--- !u!114 &474212208978967049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571645367342633844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfa6344250711e4f9a3108698649d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 100

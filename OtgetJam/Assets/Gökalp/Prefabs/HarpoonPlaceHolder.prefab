@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7231906693744170378}
   - component: {fileID: -6526975575935274436}
   - component: {fileID: -969194377834184440}
+  - component: {fileID: 4552919756248927376}
   m_Layer: 0
   m_Name: HarpoonPlaceHolder
   m_TagString: Harpoon
@@ -149,3 +150,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   lifeTime: 5
+--- !u!114 &4552919756248927376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572039433419005995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfa6344250711e4f9a3108698649d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 100
