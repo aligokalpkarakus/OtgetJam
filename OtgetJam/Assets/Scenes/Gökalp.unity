@@ -238,56 +238,6 @@ Transform:
   - {fileID: 299799200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &122025669
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 122025671}
-  - component: {fileID: 122025670}
-  m_Layer: 0
-  m_Name: SwarmManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &122025670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122025669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba5f275371ac97449b3ba74abe9107c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swarmFishList:
-  - {fileID: 299799202}
-  - {fileID: 0}
-  - {fileID: 0}
-  minDashInterval: 2
-  maxDashInterval: 5
---- !u!4 &122025671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122025669}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &221473100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3569535558161033194, guid: de354be56269a5943ab92d817fdfde7f, type: 3}
@@ -986,6 +936,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c82d598fecef24ea9eef2180eb9aa1, type: 3}
+--- !u!1001 &2567432616437544196
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503635732470010848, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831971876431364959, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: 'swarmFishList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 299799202}
+    - target: {fileID: 7845654671711903996, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_Name
+      value: SwarmManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845654671711903996, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
 --- !u!1001 &4884311069490836492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1425,5 +1440,5 @@ SceneRoots:
   - {fileID: 407482428}
   - {fileID: 5130110675850063082}
   - {fileID: 86323845}
-  - {fileID: 122025671}
+  - {fileID: 2567432616437544196}
   - {fileID: 2016151904}

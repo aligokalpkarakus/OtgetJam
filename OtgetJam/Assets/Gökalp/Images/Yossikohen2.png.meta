@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: f5760fa9375e5d941a4070457c1d5650
+guid: 24d856f6672993b46a2b39264cc2b0b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4308614325045302918
-    second: "C\u0327o\u0308ps1_0"
+      213: 112112087129176357
+    second: Yossikohen2_0
+  - first:
+      213: 7053350551539088518
+    second: Yossikohen2_1
+  - first:
+      213: 4770207809182766510
+    second: Yossikohen2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "C\u0327o\u0308ps1_0"
+      name: Yossikohen2_0
       rect:
         serializedVersion: 2
-        x: 520
-        y: 115
-        width: 893
-        height: 928
+        x: 243
+        y: 0
+        width: 410
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a79e381791ab434c0800000000000000
-      internalID: -4308614325045302918
+      spriteID: 529bc58695d4e8100800000000000000
+      internalID: 112112087129176357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yossikohen2_1
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 0
+        width: 146
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cfac4d4f882e160800000000000000
+      internalID: 7053350551539088518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yossikohen2_2
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 42
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea512239abe233240800000000000000
+      internalID: 4770207809182766510
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "C\u0327o\u0308ps1_0": -4308614325045302918
+      Yossikohen2_0: 112112087129176357
+      Yossikohen2_1: 7053350551539088518
+      Yossikohen2_2: 4770207809182766510
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
