@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public DialogueData dialogueData;
-    public Text speakerText;
-    public Text dialogueText;
+    public TextMeshProUGUI speakerText;
+    public TextMeshProUGUI dialogueText;
+    public Image dialogueImage;
     public Button nextButton;
     public Button previousButton;
 
@@ -25,8 +27,17 @@ public class DialogueManager : MonoBehaviour
         speakerText.text = currentLine.speakerName;
         dialogueText.text = currentLine.text;
 
+        if (currentLine.optionalImage != null)
+        {
+            dialogueImage.gameObject.SetActive(true);
+            dialogueImage.sprite = currentLine.optionalImage;
+        }
+        else
+        {
+            dialogueImage.gameObject.SetActive(false);
+        }
+
         previousButton.gameObject.SetActive(currentLineIndex > 0);
-        nextButton.GetComponentInChildren<Text>().text = (currentLineIndex == dialogueData.lines.Length - 1) ? "Devam Et" : "Ýleri";
     }
 
     private void NextLine()
@@ -38,7 +49,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            // Son satýra geldi, sahne deðiþtir
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

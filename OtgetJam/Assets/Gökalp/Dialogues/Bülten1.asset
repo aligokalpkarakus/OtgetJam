@@ -15,18 +15,32 @@ MonoBehaviour:
   lines:
   - speakerName: Spiker
     text: "\u0130yi ak\u015Famlar say\u0131n seyirciler"
+    optionalImage: {fileID: 0}
   - speakerName: Spiker
     text: "Bug\xFCnk\xFC g\xFCndemimiz sudaki ya\u015Fam, yenilenebilir enerji, temiz
       su ve sanitasyon."
+    optionalImage: {fileID: 0}
   - speakerName: Spiker
     text: "Denizlerimizdeki \xE7\xF6pler bir\xE7ok \u015Firket taraf\u0131ndan temizlenmeye
       \xE7al\u0131\u015F\u0131larak temiz su ve sanitasyonla beraber sudaki ya\u015Fam\u0131
       da korumaya hizmet ediyor."
+    optionalImage: {fileID: 21300000, guid: d6334bec2d8fdb246b34a4f479867c05, type: 3}
   - speakerName: Spiker
     text: "Bununla beraber bir\xE7ok r\xFCzgar t\xFCrbini ile de yenilenebilir enerji
       konusunda \xE7al\u0131\u015Fmalar mevcut."
+    optionalImage: {fileID: 2888020548318047146, guid: d4d9e7603b19df3439e7f1051a812c8c, type: 3}
+  - speakerName: Spiker
+    text: "Bir son dakika haberi ile kar\u015F\u0131n\u0131zday\u0131m. Nemo bal\u0131\u011F\u0131
+      t\xFCr\xFCn\xFCn son \xF6rne\u011Fi."
+    optionalImage: {fileID: -2723176627995320239, guid: c0e0568dcf6b419418e618ca2aa001e8, type: 3}
   - speakerName: Spiker
     text: "Yavrular\u0131n\u0131 do\u011Furmak i\xE7in s\u0131cak sulara yelken a\xE7t\u0131.
       Bu yolculu\u011Fu tamamlamak i\xE7in 1 g\xFCn\xFC kald\u0131."
+    optionalImage: {fileID: -2723176627995320239, guid: c0e0568dcf6b419418e618ca2aa001e8, type: 3}
   - speakerName: Spiker
-    text: "T\xFCm bu \xE7abalara ra\u011Fmen Nemo'nun yar\u0131n\u0131 olmayabilir..."
+    text: "Nemo, di\u011Fer bal\u0131klar ve deniz kirlili\u011Fi taraf\u0131ndan
+      tehlikede"
+    optionalImage: {fileID: -243163505066182448, guid: 9025186c0ab756144bbbd6faa4988ef0, type: 3}
+  - speakerName: Spiker
+    text: "Nemo'nun bu \u015Fartlar alt\u0131nda yar\u0131n\u0131 olacak m\u0131?"
+    optionalImage: {fileID: -8448733496110694715, guid: c6634c5d2cfc2c247800d04c91e765c7, type: 3}

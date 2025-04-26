@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bulten4.unity
     guid: 22eeb09c86406324d94bb9ff9fd82313
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 23836f71bdb941c4ebf49e0237c7b6dc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -14,4 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Spiker
-    text: 
+    text: "\u0130yi g\xFCnler say\u0131n seyirciler."
+    optionalImage: {fileID: 0}
+  - speakerName: Spiker
+    text: "Son saatlerde ald\u0131\u011F\u0131m\u0131z haberler bir hayli \xFCz\xFCc\xFC."
+    optionalImage: {fileID: 0}
+  - speakerName: Spiker
+    text: "Nemo t\xFCr\xFCn\xFCn son \xF6rne\u011Fi olmas\u0131yla beraber maddi
+      anlamda \xE7ok \u015Fey ifade eder hale geldi."
+    optionalImage: {fileID: 0}
+  - speakerName: Spiker
+    text: "K\xF6t\xFC niyetli insanlar Nemo'yu avlayarak maddi kazan\xE7 elde etme
+      pe\u015Finde."
+    optionalImage: {fileID: -4285534218247674291, guid: 6f7a49aff1a347d4bbb5a121357b7942, type: 3}
+  - speakerName: Spiker
+    text: "Nemo yar\u0131n\u0131 i\xE7in m\xFCcadele etmekte."
+    optionalImage: {fileID: -4285534218247674291, guid: 6f7a49aff1a347d4bbb5a121357b7942, type: 3}

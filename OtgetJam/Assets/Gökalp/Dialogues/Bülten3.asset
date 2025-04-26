@@ -14,4 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Spiker
-    text: 
+    text: "\u0130yi g\xFCnler say\u0131n seyirciler."
+    optionalImage: {fileID: 0}
+  - speakerName: Spiker
+    text: "Nemo'yu tehlikeye sokan \u015Feyler deniz kirlili\u011Fi ve k\xF6t\xFC
+      niyetli insanlarla maalesef s\u0131n\u0131rl\u0131 de\u011Fil."
+    optionalImage: {fileID: 0}
+  - speakerName: Spiker
+    text: "Ba\u015Fka yerlerden getirilerek do\u011Faya sal\u0131nan baz\u0131 t\xFCrler,
+      istilac\u0131 t\xFCr olarak davran\u0131yor."
+    optionalImage: {fileID: 4370824061136938931, guid: a2be4909c72405f4a8faa3fa7731720a, type: 3}
+  - speakerName: Spiker
+    text: "Bu t\xFCrler Nemo'nun m\xFCcadelesini daha da zorla\u015Ft\u0131r\u0131yor."
+    optionalImage: {fileID: 4370824061136938931, guid: a2be4909c72405f4a8faa3fa7731720a, type: 3}
