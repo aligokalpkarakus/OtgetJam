@@ -127,7 +127,10 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7643310635153662905}
   maxRotationAngle: 75
   rb: {fileID: 734390896302117350}
-  speed: 500
+  speed: 750
+  patrolWaitTime: 2
+  viewRadius: 5
+  viewAngle: 90
 --- !u!50 &734390896302117350
 Rigidbody2D:
   serializedVersion: 5
@@ -140,10 +143,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
