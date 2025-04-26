@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class MainCharacter : Entity
 {
-    [SerializeField] int  speed;
-    [SerializeField] int dash_speed;
+    [SerializeField] float speed;
+    [SerializeField] float dash_speed;
+    [SerializeField] float ruzgar_speed;
     [SerializeField] float coolDownPeriod;
+    
 
     public static Vector2 currentMainCharacterPosition;
     private float nextAvaliableTimeDash = 0f;
@@ -16,7 +18,6 @@ public class MainCharacter : Entity
         base.Start();
 
     }
-
     // Update is called once per frame
     protected override void Update()
     {
@@ -36,36 +37,39 @@ public class MainCharacter : Entity
             if (Input.GetKey(KeyCode.W))
             {
                 move_v2 += Vector2.up;
-                Debug.Log("up");
+                
             }
             if (Input.GetKey(KeyCode.S))
             {
                 move_v2 += Vector2.down;
-                Debug.Log("down");
+                
             }
             if (Input.GetKey(KeyCode.D))
             {
                 move_v2 += Vector2.right;
-                Debug.Log("right");
+                
             }
             if (Input.GetKey(KeyCode.A))
             {
                 move_v2 += Vector2.left;
-                Debug.Log("left");
+               
             }
 
             // normalize ediyoz ki çarpazda hýzlý gitmesin
             if (move_v2 != Vector2.zero)
                 move_v2 = move_v2.normalized;
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && Time.time >= nextAvaliableTimeDash)
                 dash(move_v2);
             else
-                base.moveVectorized(move_v2, this.speed);
+                base.moveVectorized(move_v2, this.speed * Time.deltaTime);
 
         }
-
-
+        else if (currentLayer == "Ruzgar")
+        {
+            Debug.Log("RUZGAR");
+            base.moveImpulse(Vector2.right, this.ruzgar_speed*Time.deltaTime);
+        }
 
     }
 
@@ -73,6 +77,7 @@ public class MainCharacter : Entity
 
     private void dash(Vector2 dir){
         base.moveImpulse(dir, this.dash_speed);
+        nextAvaliableTimeDash = Time.time + coolDownPeriod;
         Debug.Log("dashed");
     }
 

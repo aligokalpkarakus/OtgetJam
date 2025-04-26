@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9218889495420810954}
   - component: {fileID: 7643310635153662905}
   - component: {fileID: 3124076701771372018}
+  - component: {fileID: 7743286905693299025}
+  - component: {fileID: 734390896302117350}
   m_Layer: 0
   m_Name: BigFish
   m_TagString: Untagged
@@ -76,8 +78,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 4313914244865895254, guid: 1c126e4c2e8b4a7498f94edbd1ad0f25, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 3554002679272061861, guid: 8e961cbeaae95dd4e8c95a62c1184536, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,3 +112,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7743286905693299025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2717397335433959501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048f016988ef97749b18225d34ae4518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7643310635153662905}
+  maxRotationAngle: 75
+  rb: {fileID: 734390896302117350}
+  speed: 750
+  patrolWaitTime: 2
+  viewRadius: 5
+  viewAngle: 90
+--- !u!50 &734390896302117350
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2717397335433959501}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

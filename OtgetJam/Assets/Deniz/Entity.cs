@@ -18,22 +18,22 @@ public class Entity : MonoBehaviour
     }
 
     
-    public virtual void moveVectorized(Vector2 dir,int force)
+    public virtual void moveVectorized(Vector2 dir,float force)
     {
         rb.AddForce(dir.normalized * force);
     }
 
-    public virtual void moveImpulse(Vector2 dir, int force)
+    public virtual void moveImpulse(Vector2 dir, float force)
     {
         rb.AddForce(dir.normalized * force,ForceMode2D.Impulse);
     }
 
-    public virtual void setGravity(int g)
+    public virtual void setGravity(float g)
     {
         rb.gravityScale = g;
     }
 
-    public virtual void setDrag(int d)
+    public virtual void setDrag(float d)
     {
         rb.linearDamping = d;
     }
@@ -65,10 +65,16 @@ public class Entity : MonoBehaviour
             setGravity(0);
             setDrag(2);
         }
-
         else if (layerName == "Air")
         {
+            Debug.Log("AIR");
             setGravity(1);
+            setDrag(1);
+        }
+        else if (layerName == "Ruzgar")
+        {
+            Debug.Log("RUZGAR");
+            setGravity(0.5f);
             setDrag(1);
         }
     }
