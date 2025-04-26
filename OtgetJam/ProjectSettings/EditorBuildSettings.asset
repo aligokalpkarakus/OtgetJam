@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AnaMenu.unity
     guid: c5c933d6189bf84439a42aabdb785385
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: aca87b6405003764a90355617e92aae9
+  - enabled: 1
     path: Assets/Scenes/Bulten1.unity
     guid: bd6dce1005a6ab042978a3bc367ea8d9
   - enabled: 1
@@ -16,19 +19,19 @@ EditorBuildSettings:
     guid: 6cabe2041fe8660429d9fc8832542c3b
   - enabled: 1
     path: Assets/Scenes/Bulten2.unity
-    guid: b8eb2ee6b62d0d54e8e2e7893b1e22ff
+    guid: 618b24c6930f41944bec5c2c1b54f2b8
   - enabled: 1
     path: Assets/Scenes/Map2.unity
-    guid: e5291cce776b09848b38d89a2a4471a0
+    guid: b610aa2d59152de4da8252fa737e952f
   - enabled: 1
     path: Assets/Scenes/Bulten3.unity
-    guid: 0865859f9ddfc344eb4547671cf7a193
+    guid: e0efeae6697b8bb4a8b4fb81f3a57754
   - enabled: 1
     path: Assets/Scenes/Map3.unity
-    guid: a0082c83a640c164e97047eca9a034c2
+    guid: 8c340204586445c4bb129d7c976c790b
   - enabled: 1
     path: Assets/Scenes/Bulten4.unity
-    guid: 22eeb09c86406324d94bb9ff9fd82313
+    guid: 299109a0c95422e49bffa37a034c05a0
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: 23836f71bdb941c4ebf49e0237c7b6dc

@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba354f7c657c0246bfd6cf7dbded15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Bulten1
+  gameSceneName: LoadingScene
 --- !u!4 &1027517917
 Transform:
   m_ObjectHideFlags: 0
