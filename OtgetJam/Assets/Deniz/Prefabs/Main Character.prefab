@@ -159,7 +159,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3003208390295444355}
   maxRotationAngle: 75
   rb: {fileID: 6859081789178676312}
-  speed: 12
+  speed: 8
   dash_speed: 1
   coolDownPeriod: 0
 --- !u!50 &6859081789178676312

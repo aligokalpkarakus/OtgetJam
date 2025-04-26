@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MainCharacter : Entity
 {
-    [SerializeField] int  speed;
-    [SerializeField] int dash_speed;
+    [SerializeField] float speed;
+    [SerializeField] float dash_speed;
     [SerializeField] float coolDownPeriod;
 
     public static Vector2 currentMainCharacterPosition;
@@ -16,7 +16,6 @@ public class MainCharacter : Entity
         base.Start();
 
     }
-
     // Update is called once per frame
     protected override void Update()
     {
@@ -61,7 +60,7 @@ public class MainCharacter : Entity
             if (Input.GetKey(KeyCode.LeftShift) && Time.time >= nextAvaliableTimeDash)
                 dash(move_v2);
             else
-                base.moveVectorized(move_v2, this.speed);
+                base.moveVectorized(move_v2, this.speed * Time.deltaTime);
 
         }
 
