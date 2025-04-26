@@ -38,18 +38,19 @@ public class MainCharacter : Entity
         currentMainCharacterPosition = base.rb.position;
 
         // Eðer çöpe yakalandýysa, kaçýþ sistemini çalýþtýr
+        
+
+        Vector2 move_v2 = Vector2.zero;
+        currentLayer = base.checkCurrentLayer(); // Þu an bulunan layer
+        base.updateGravity();//suda ve havada olma durumuna göre gravity scale'ýný günceller.
+
         if (isTrapped)
         {
             HandleTrashEscape();
-            // Hareket etmesini engelle
+            return; // Hareket etmesini engelle
         }
         else
         {
-            Vector2 move_v2 = Vector2.zero;
-            currentLayer = base.checkCurrentLayer(); // Þu an bulunan layer
-            base.updateGravity();//suda ve havada olma durumuna göre gravity scale'ýný günceller.
-
-
             if (currentLayer == "Water")
             {
                 if (Input.GetKey(KeyCode.W))

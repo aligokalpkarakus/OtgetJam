@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7265914543616535215}
   - component: {fileID: 302378286567629270}
   - component: {fileID: 6885245491201857991}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: DENIZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
-  m_RendererPriority: 0
+  m_RendererPriority: 1
   m_Materials:
   - {fileID: 2100000, guid: d9201d047fc324340893fb474c18c5c4, type: 2}
   m_StaticBatchInfo:
@@ -222,7 +222,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8020061367537930942}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

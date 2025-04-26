@@ -40,13 +40,21 @@ public class Entity : MonoBehaviour
 
     public virtual string checkCurrentLayer()
     {
-        //O an olunan noktadaki layerýn ismini döndürür.
-        RaycastHit2D hit = Physics2D.Raycast(rb.position, Vector2.zero);
+        // rb.position'dan direkt aþaðýya doðru çok kýsa bir ray atýyoruz
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, Vector2.down, 0.1f);
 
-        string layerName = LayerMask.LayerToName(hit.collider.gameObject.layer);
-
-        return layerName;
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.gameObject.name);
+            return LayerMask.LayerToName(hit.collider.gameObject.layer);
+        }
+        else
+        {
+            return "Air"; // Hiçbir þeye çarpmadýysa havadayýz
+        }
     }
+
+
 
     public virtual void ApplyForceToTarget(Vector2 targetPosition, float forceAmount)
     {
@@ -56,29 +64,37 @@ public class Entity : MonoBehaviour
         rb.AddForce(direction * forceAmount);
     }
 
+    private string previousLayer = "";
+
     public virtual void updateGravity()
     {
         string layerName = checkCurrentLayer();
 
-        if (layerName == "Water")//Water ise gravity 0 olcak 
+        if (layerName != previousLayer)
         {
-            Debug.Log("Water");
-            setGravity(0);
-            setDrag(2);
-        }
-        else if (layerName == "Air")
-        {
-            Debug.Log("AIR");
-            setGravity(1);
-            setDrag(1);
-        }
-        else if (layerName == "Ruzgar")
-        {
-            Debug.Log("RUZGAR");
-            setGravity(0.5f);
-            setDrag(1);
+            previousLayer = layerName;
+
+            if (layerName == "Water")
+            {
+                
+                setGravity(0);
+                setDrag(2);
+            }
+            else if (layerName == "Air" )
+            {
+                
+                setGravity(1);
+                setDrag(1);
+            }
+            else if (layerName == "Ruzgar")
+            {
+                
+                setGravity(0.5f);
+                setDrag(1);
+            }
         }
     }
+
 
     public virtual void RotateToVelocity()
     {
