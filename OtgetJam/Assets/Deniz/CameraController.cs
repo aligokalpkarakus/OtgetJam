@@ -10,6 +10,9 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        
+
+        // Hedef pozisyo
 
         Vector3 targetPosition = new Vector3(
              MainCharacter.currentMainCharacterPosition.x + offset.x,

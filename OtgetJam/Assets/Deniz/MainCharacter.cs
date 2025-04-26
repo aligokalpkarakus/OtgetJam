@@ -4,8 +4,10 @@ public class MainCharacter : Entity
 {
     [SerializeField] int  speed;
     [SerializeField] int dash_speed;
+    [SerializeField] float coolDownPeriod;
 
     public static Vector2 currentMainCharacterPosition;
+    private float nextAvaliableTimeDash = 0f;
 
     private string currentLayer = "";
 
@@ -67,7 +69,7 @@ public class MainCharacter : Entity
 
     }
 
-    
+   
 
     private void dash(Vector2 dir){
         base.moveImpulse(dir, this.dash_speed);
