@@ -11687,12 +11687,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 524837120726029828, guid: b3a8a4e5b53f33d4ca7657f08ae09f16, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 524837120726029828, guid: b3a8a4e5b53f33d4ca7657f08ae09f16, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 524837120726029828, guid: b3a8a4e5b53f33d4ca7657f08ae09f16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.28
+      value: 8.01
       objectReference: {fileID: 0}
     - target: {fileID: 524837120726029828, guid: b3a8a4e5b53f33d4ca7657f08ae09f16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.28
+      value: 4.6499996
       objectReference: {fileID: 0}
     - target: {fileID: 2505718704420280104, guid: b3a8a4e5b53f33d4ca7657f08ae09f16, type: 3}
       propertyPath: m_Layer
@@ -11808,30 +11816,6 @@ PrefabInstance:
       propertyPath: healthBarTop
       value: 
       objectReference: {fileID: 775153321}
-    - target: {fileID: 1688650883756403030, guid: dfa14fe8aeab65046800ee59e1330078, type: 3}
-      propertyPath: m_Size.x
-      value: 0.43341255
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688650883756403030, guid: dfa14fe8aeab65046800ee59e1330078, type: 3}
-      propertyPath: m_Size.y
-      value: 0.97639275
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688650883756403030, guid: dfa14fe8aeab65046800ee59e1330078, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.7908616
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688650883756403030, guid: dfa14fe8aeab65046800ee59e1330078, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.011803627
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688650883756403030, guid: dfa14fe8aeab65046800ee59e1330078, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548934064510028003, guid: dfa14fe8aeab65046800ee59e1330078, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

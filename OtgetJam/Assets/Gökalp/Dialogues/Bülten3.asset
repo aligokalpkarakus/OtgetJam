@@ -17,8 +17,8 @@ MonoBehaviour:
     text: "\u0130yi g\xFCnler say\u0131n seyirciler."
     optionalImage: {fileID: 0}
   - speakerName: Spiker
-    text: "Nemo'yu tehlikeye sokan \u015Feyler deniz kirlili\u011Fi ve k\xF6t\xFC
-      niyetli insanlarla maalesef s\u0131n\u0131rl\u0131 de\u011Fil."
+    text: "Maalesef Nemo'yu tehlikeye sokan \u015Feyler deniz kirlili\u011Fi ve k\xF6t\xFC
+      niyetli insanlarla s\u0131n\u0131rl\u0131 de\u011Fil."
     optionalImage: {fileID: 0}
   - speakerName: Spiker
     text: "Ba\u015Fka yerlerden getirilerek do\u011Faya sal\u0131nan baz\u0131 t\xFCrler,
