@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,15 +17,18 @@ public class MainCharacter : Entity
     [SerializeField] float escapeTimeLimit = 5f;
 
     [Header("Dash Visuals (UI)")]
-    [SerializeField] private Image dashIcon; // UI Image
-    [SerializeField] private float cooldownFadeAlpha = 0.3f; // Cooldown'da icon þeffaflýðý
+    [SerializeField] private Image dashIcon;
+    [SerializeField] private float cooldownFadeAlpha = 0.3f;
+
+    [Header("Trash Escape UI")]
+    [SerializeField] private GameObject trashEscapePanel; // Panel GameObject
+    [SerializeField] private TextMeshProUGUI countdownText;          // Geri sayým text
 
     public static Vector2 currentMainCharacterPosition;
     private float nextAvaliableTimeDash = 0f;
 
     private string currentLayer = "";
 
-    // Trash trap deðiþkenleri
     private bool isTrapped = false;
     private int currentPresses = 0;
     private float trapTimer = 0f;
@@ -39,6 +43,8 @@ public class MainCharacter : Entity
         if (dashIcon != null)
             originalDashIconColor = dashIcon.color;
 
+        if (trashEscapePanel != null)
+            trashEscapePanel.SetActive(false); // Baþta kapalý
     }
 
     protected override void Update()
@@ -54,7 +60,7 @@ public class MainCharacter : Entity
         if (isTrapped)
         {
             HandleTrashEscape();
-            return; // Çöpteyken hareket yok
+            return;
         }
 
         Vector2 move_v2 = Vector2.zero;
@@ -87,7 +93,6 @@ public class MainCharacter : Entity
         base.moveImpulse(dir, this.dash_speed);
         nextAvaliableTimeDash = Time.time + coolDownPeriod;
         Debug.Log("Dashed!");
-
     }
 
     private void UpdateDashVisuals()
@@ -111,9 +116,12 @@ public class MainCharacter : Entity
     {
         trapTimer -= Time.deltaTime;
 
+        UpdateTrashEscapeUI();
+
         if (trapTimer <= 0)
         {
             Debug.Log("Karakter çöpten kurtulamadý!");
+            CloseTrashEscapeUI();
             Die();
             return;
         }
@@ -131,6 +139,25 @@ public class MainCharacter : Entity
         }
     }
 
+    private void UpdateTrashEscapeUI()
+    {
+        if (trashEscapePanel != null)
+        {
+            if (!trashEscapePanel.activeSelf)
+                trashEscapePanel.SetActive(true);
+
+            if (countdownText != null)
+                countdownText.text = Mathf.Ceil(trapTimer).ToString("0");
+
+        }
+    }
+
+    private void CloseTrashEscapeUI()
+    {
+        if (trashEscapePanel != null)
+            trashEscapePanel.SetActive(false);
+    }
+
     private void EscapeFromTrash()
     {
         isTrapped = false;
@@ -139,6 +166,7 @@ public class MainCharacter : Entity
             Destroy(trappingTrash);
         }
         Debug.Log("Karakter çöpten kurtuldu!");
+        CloseTrashEscapeUI();
     }
 
     private void Die()
