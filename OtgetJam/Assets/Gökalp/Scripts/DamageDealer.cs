@@ -11,6 +11,7 @@ public class DamageDealer : MonoBehaviour
             HealthSystem health = collision.GetComponent<HealthSystem>();
             if (health != null)
             {
+                SoundManager.Instance.PlaySound(0);
                 health.TakeDamage(damageAmount);
             }
 

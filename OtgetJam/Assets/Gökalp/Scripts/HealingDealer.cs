@@ -11,6 +11,7 @@ public class HealingDealer : MonoBehaviour
             HealthSystem health = collision.GetComponent<HealthSystem>();
             if (health != null)
             {
+                SoundManager.Instance.PlaySound(0);
                 health.Heal(healAmount);
                 Destroy(gameObject); // Küçük balýk yenir
             }

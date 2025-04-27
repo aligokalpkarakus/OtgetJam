@@ -68,6 +68,7 @@ public class SwarmFish : Entity
         isDashing = true;
 
         moveImpulse(direction, dashForce);
+        SoundManager.Instance.PlaySound(3);
 
         if (exclamationInstance != null)
         {

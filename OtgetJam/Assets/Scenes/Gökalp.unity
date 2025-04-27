@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &86323845
 Transform:
   m_ObjectHideFlags: 0
@@ -172,11 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa6c26ef56123d42846b9fe33cacf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &299799203 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3335795025276972560, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-  m_PrefabInstance: {fileID: 6514875618692641992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &395227312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5589069543217509028, guid: 507125e56c2d05349bca5cc0b17d6ea9, type: 3}
@@ -660,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2016151903
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1014,7 +1009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7845654671711903996, guid: 88a0e9b8a452e3340a7193dca2f12e8d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1471,14 +1466,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0130stilac\u0131"
       objectReference: {fileID: 0}
-    - target: {fileID: 3263490433392637464, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3335795025276972560, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4278094393000729336, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.41
@@ -1519,22 +1506,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4307962128554663128, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 299799203}
-    - target: {fileID: 4307962128554663128, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-      propertyPath: dashForce
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307962128554663128, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-      propertyPath: moveForce
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307962128554663128, guid: abd7d88a67aa2a34796da2908fb2f21f, type: 3}
-      propertyPath: exclamationMarkPrefab
-      value: 
-      objectReference: {fileID: 8802571715801169183, guid: 1d913ebd06502fa44a8c33b78f80b2cd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

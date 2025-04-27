@@ -76,12 +76,14 @@ public class MainCharacter : Entity
         }
         else if (currentLayer == "Ruzgar")
         {
+            SoundManager.Instance.PlaySound(5);
             base.moveImpulse(Vector2.right, this.ruzgar_speed * Time.deltaTime);
         }
     }
 
     private void dash(Vector2 dir)
     {
+        SoundManager.Instance.PlaySound(1);
         base.moveImpulse(dir, this.dash_speed);
         nextAvaliableTimeDash = Time.time + coolDownPeriod;
         Debug.Log("Dashed!");
@@ -119,6 +121,7 @@ public class MainCharacter : Entity
         if (Input.GetKeyDown(escapeKey))
         {
             currentPresses++;
+            SoundManager.Instance.PlaySound(9);
             Debug.Log("Tuşa basıldı! " + currentPresses + "/" + requiredPresses);
 
             if (currentPresses >= requiredPresses)

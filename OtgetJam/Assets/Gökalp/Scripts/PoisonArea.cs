@@ -14,6 +14,7 @@ public class PoisonArea : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundManager.Instance.PlaySound(4);
             playerHealth = collision.GetComponent<HealthSystem>();
             isPlayerInside = true;
         }

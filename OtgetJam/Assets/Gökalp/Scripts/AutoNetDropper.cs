@@ -20,6 +20,7 @@ public class AutoNetDropper : MonoBehaviour
 
     void DropNet()
     {
+        SoundManager.Instance.PlaySound(2);
         Instantiate(netPrefab, dropPoint.position, Quaternion.identity);
     }
 }

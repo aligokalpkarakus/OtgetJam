@@ -28,6 +28,8 @@ public class AutoHarpoonShooter : MonoBehaviour
     {
         if (fishTarget == null) return;
 
+        SoundManager.Instance.PlaySound(2);
+
         Vector2 direction = (fishTarget.position - firePoint.position).normalized;
 
         GameObject harpoon = Instantiate(harpoonPrefab, firePoint.position, Quaternion.identity);

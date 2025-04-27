@@ -128,10 +128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6785378561688034354}
   maxRotationAngle: 75
-  rb: {fileID: 0}
-  moveForce: 3
-  dashForce: 10
-  exclamationMarkPrefab: {fileID: 3752724282638112257, guid: b4c82d598fecef24ea9eef2180eb9aa1, type: 3}
+  rb: {fileID: 3335795025276972560}
+  moveForce: 200
+  dashForce: 20
+  exclamationMarkPrefab: {fileID: 8802571715801169183, guid: 1d913ebd06502fa44a8c33b78f80b2cd, type: 3}
 --- !u!50 &3335795025276972560
 Rigidbody2D:
   serializedVersion: 5
