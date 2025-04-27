@@ -31,7 +31,7 @@ MonoBehaviour:
     optionalImage: {fileID: 2888020548318047146, guid: d4d9e7603b19df3439e7f1051a812c8c, type: 3}
   - speakerName: Spiker
     text: "Bir son dakika haberi ile kar\u015F\u0131n\u0131zday\u0131m. Nemo bal\u0131\u011F\u0131
-      t\xFCr\xFCn\xFCn son \xF6rne\u011Fi."
+      t\xFCr\xFCn\xFCn son \xF6rne\u011Fiyle ilgili."
     optionalImage: {fileID: -2723176627995320239, guid: c0e0568dcf6b419418e618ca2aa001e8, type: 3}
   - speakerName: Spiker
     text: "Yavrular\u0131n\u0131 do\u011Furmak i\xE7in s\u0131cak sulara yelken a\xE7t\u0131.
