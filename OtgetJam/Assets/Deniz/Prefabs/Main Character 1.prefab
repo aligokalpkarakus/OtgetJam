@@ -170,6 +170,8 @@ MonoBehaviour:
   escapeTimeLimit: 5
   dashIcon: {fileID: 0}
   cooldownFadeAlpha: 0.3
+  trashEscapePanel: {fileID: 0}
+  countdownText: {fileID: 0}
 --- !u!50 &3548934064510028003
 Rigidbody2D:
   serializedVersion: 5
